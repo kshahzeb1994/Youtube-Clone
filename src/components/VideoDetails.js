@@ -4,8 +4,10 @@ const VideoDetails = ( {video} ) => {
   if(video) {
     return (
       <div>
-        <img src={video.snippet.thumbnails.high.url}/>
-        <div>{video.snippet.title}</div>
+        <div className="ui segment">
+          <h4 className="ui header">{video.snippet.title}</h4>
+          <p>{video.snippet.description}</p>
+        </div>
       </div>
     );
   }
